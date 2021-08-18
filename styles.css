@@ -131,7 +131,7 @@ Header
     grid-template-rows: 25% 25% 25% 25%;
     width: 100%;
     height: 750px;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(/recursos/img/restaurante.jpg);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(recursos/img/restaurante.jpg);
 }
 
 .banner_contenedor {
