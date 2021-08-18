@@ -73,6 +73,7 @@ Header
 .header ul li:hover {
     cursor: pointer;
     background-color: #B28220;
+    transition: 0.5s;
 }
 
 .header a {
@@ -274,6 +275,16 @@ Carta
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+
+/*Contacto*/
+
+.contacto {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    bottom: -5px;
 }
 
 
