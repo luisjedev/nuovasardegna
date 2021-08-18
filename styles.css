@@ -123,69 +123,7 @@ Header
 }
 
 
-/* .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo img {
-    position: relative;
-    width: 400px;
-    height: 200px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.menu {
-    width: 100%;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 20px;
-    padding-right: 10px;
-}
-
-.menu ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    object-fit: inherit;
-    object-fit: contain;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-.menu ul li {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-.menu ul li:hover {
-    cursor: pointer;
-    background-color: #B28220;
-} */
-
-
-/*
-Header
-*/
-
-
-/*
-Banner
-*/
+/*BANNER*/
 
 .banner {
     display: grid;
@@ -230,11 +168,6 @@ Banner
 
 
 /*
-Banner
-*/
-
-
-/*
 Conocenos
 */
 
@@ -265,11 +198,6 @@ Conocenos
     grid-column-start: 2;
     grid-column-end: 3;
 }
-
-
-/*
-Conocenos
-*/
 
 
 /*
@@ -349,162 +277,7 @@ Carta
 }
 
 
-/* .carta_contenedor {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-row: 25% 25% 25% 25%;
-    width: 100%;
-    margin-top: 20px;
-}
-
-.carta_pizza {
-    position: relative;
-    padding-left: 10px;
-    padding-right: 10px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    width: 100%;
-    height: 100%;
-}
-
-.carta_pizza_imagen {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    background-image: url(/recursos/img/pizza.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.carta_pizza_texto {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.carta_pizza_texto p {
-    margin: 0;
-    padding: 0;
-}
-
-.carta_pasta {
-    position: relative;
-    padding-left: 10px;
-    padding-right: 10px;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    width: 100%;
-    height: 100%;
-}
-
-.carta_pasta_imagen {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    background-image: url(/recursos/img/pasta.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.carta_pasta_texto {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.carta_pasta_texto p {
-    margin: 0;
-    padding: 0;
-}
-
-.carta_vinos {
-    position: relative;
-    padding-left: 10px;
-    padding-right: 10px;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    width: 100%;
-    height: 100%;
-}
-
-.carta_vinos_imagen {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    background-image: url(/recursos/img/vinos.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.carta_vinos_texto {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.carta_vinos_texto p {
-    margin: 0;
-    padding: 0;
-}
-
-.carta_postres {
-    position: relative;
-    padding-left: 10px;
-    padding-right: 10px;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    width: 100%;
-    height: 100%;
-}
-
-.carta_postres_imagen {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    background-image: url(/recursos/img/postre.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.carta_postres_texto {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.carta_postres_texto p {
-    margin: 0;
-    padding: 0;
-} */
-
-
-/*
-Carta
-*/
-
-
-/* 
-Footer
-*/
+/*FOOTER*/
 
 footer {
     background: #18181A;
@@ -551,11 +324,6 @@ footer p {
     text-align: center;
     color: white;
 }
-
-
-/* 
-Footer
-*/
 
 
 /*
@@ -613,6 +381,8 @@ MediaQ
         margin-bottom: 20px;
         margin-top: 20px;
         font-size: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
     .banner_titulo {
         font-size: 18px;
