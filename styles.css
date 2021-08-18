@@ -292,7 +292,7 @@ Carta
 }
 
 .carta_pizza_imagen {
-    background-image: url(/recursos/img/pizza.jpg);
+    background-image: url(recursos/img/pizza.jpg);
     grid-area: carta_pizza_imagen;
     background-size: cover;
 }
@@ -306,7 +306,7 @@ Carta
 }
 
 .carta_pasta_imagen {
-    background-image: url(/recursos/img/pasta.jpg);
+    background-image: url(recursos/img/pasta.jpg);
     grid-area: carta_pasta_imagen;
     background-size: cover;
 }
@@ -320,7 +320,7 @@ Carta
 }
 
 .carta_vinos_imagen {
-    background-image: url(/recursos/img/vinos.jpg);
+    background-image: url(recursos/img/vinos.jpg);
     grid-area: carta_vinos_imagen;
     background-size: cover;
 }
@@ -334,7 +334,7 @@ Carta
 }
 
 .carta_postres_imagen {
-    background-image: url(/recursos/img/postre.jpg);
+    background-image: url(recursos/img/postre.jpg);
     grid-area: carta_postres_imagen;
     background-size: cover;
 }
