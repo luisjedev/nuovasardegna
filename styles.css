@@ -1,66 +1,66 @@
-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
 html,
 body {
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: antiquewhite;
+    background-color: white;
+    scroll-behavior: smooth;
 }
 
-header {
+h4 {
+    color: #18181A;
+    font-size: 35px;
+}
+
+h5 {
+    color: #682C38;
+    font-size: 35px;
+    margin: 0;
+    padding: 0;
+}
+
+.titulo_seccion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+/*
+Header
+*/
+
+.header {
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "menu_1 logo menu_2";
+    grid-template-rows: 1fr;
     background-color: #682C38;
     width: 100%;
-    height: 200px;
+    height: auto;
     margin: auto;
-    position: fixed;
     top: 0;
     z-index: 1;
 }
 
-.logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo img {
-    position: relative;
-    width: 400px;
-    height: 200px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.menu {
-    grid-column-start: 1;
-    grid-column-end: 6;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: white;
-    font-size: 20px;
-    padding-right: 10px;
-}
-
-.menu ul {
+.header ul {
     margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
     justify-content: space-around;
-    object-fit: inherit;
-    object-fit: contain;
     align-items: center;
-    width: 70%;
+    width: 100%;
     height: 100%;
 }
 
-.menu ul li {
+.header li {
+    color: white;
+    font-size: 20px;
     padding: 0;
     margin: 0;
     display: flex;
@@ -70,19 +70,68 @@ header {
     height: 100%;
 }
 
-.menu ul li:hover {
+.header ul li:hover {
     cursor: pointer;
     background-color: #B28220;
 }
+
+.header a {
+    text-decoration: none;
+    color: white;
+}
+
+.header a:visited {
+    color: white;
+}
+
+.menu_1 {
+    grid-area: menu_1;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+
+.menu_2 {
+    grid-area: menu_2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.logo img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 150px;
+    max-height: 150px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+/*BANNER*/
 
 .banner {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 25% 25% 25% 25%;
-    margin-top: 100px;
     width: 100%;
     height: 750px;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(/recursos/img/restaurante.jpg);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(recursos/img/restaurante.jpg);
 }
 
 .banner_contenedor {
@@ -98,56 +147,282 @@ header {
 
 .banner_titulo {
     color: white;
-    font-size: 40px;
+    text-align: center;
+    font-size: 35px;
     text-shadow: 0px 0px 20px black;
+}
+
+.banner_titulo h1 {
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 .banner_subtitulo {
     position: relative;
     bottom: 50px;
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    text-align: center;
+    font-family: 'Alegreya Sans', sans-serif;
 }
 
 
-/* 
-Footer
+/*
+Conocenos
 */
+
+.conocenos {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 20% 80%;
+    width: 100%;
+    background-color: white;
+}
+
+.conocenos_titulo {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+
+.conocenos_texto {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+
+/*
+Carta
+*/
+
+.carta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 400px);
+    grid-template-areas: "carta_pizza_imagen carta_pizza_texto" "carta_pasta_texto carta_pasta_imagen" "carta_vinos_imagen carta_vinos_texto" "carta_postres_texto carta_postres_imagen";
+    grid-gap: 20px;
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.carta h5 {
+    padding-bottom: 20px;
+}
+
+.carta_pizza_imagen {
+    background-image: url(recursos/img/pizza.jpg);
+    grid-area: carta_pizza_imagen;
+    background-size: cover;
+}
+
+.carta_pizza_texto {
+    grid-area: carta_pizza_texto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carta_pasta_imagen {
+    background-image: url(recursos/img/pasta.jpg);
+    grid-area: carta_pasta_imagen;
+    background-size: cover;
+}
+
+.carta_pasta_texto {
+    grid-area: carta_pasta_texto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carta_vinos_imagen {
+    background-image: url(recursos/img/vinos.jpg);
+    grid-area: carta_vinos_imagen;
+    background-size: cover;
+}
+
+.carta_vinos_texto {
+    grid-area: carta_vinos_texto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carta_postres_imagen {
+    background-image: url(recursos/img/postre.jpg);
+    grid-area: carta_postres_imagen;
+    background-size: cover;
+}
+
+.carta_postres_texto {
+    grid-area: carta_postres_texto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/*FOOTER*/
 
 footer {
     background: #18181A;
     width: 100%;
-    height: 300px;
+    height: auto;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 65% 15% 20%;
+    margin: 0;
 }
 
 .footer_logo {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    width: 400px;
-    height: 200px;
-    display: block;
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.footer_logo img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 150px;
+    max-height: 150px;
 }
 
 .footer_social {
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    width: 100%;
 }
 
 .footer_social img {
     width: 30px;
     height: 30px;
-    padding: 15px;
+    padding: 0 20px;
 }
 
 footer p {
     display: flex;
     justify-content: center;
+    text-align: center;
     color: white;
+    background-color: #18181A;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*
+
+MediaQ
+
+*/
+
+
+/*Tablet*/
+
+@media screen and (max-width: 992px) {
+    .header {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-row-gap: 20px;
+        grid-template-areas: "logo" "menu_1" "menu_2";
+        padding-bottom: 20px;
+    }
+    .header li {
+        font-size: 18px;
+        width: 100%;
+        height: 40px;
+        max-width: 200px;
+    }
+    /*Carta*/
+    .carta {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(8, 400px);
+        grid-template-areas: "carta_pizza_imagen" "carta_pizza_texto" "carta_pasta_imagen" "carta_pasta_texto" "carta_vinos_imagen" "carta_vinos_texto" "carta_postres_imagen" "carta_postres_texto";
+        width: 80%;
+        max-width: 1100px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .conocenos {
+        margin-top: 15px;
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: 20% 80%;
+        width: 100%;
+        background-color: white;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .titulo_seccion {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 25px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .banner_titulo {
+        font-size: 18px;
+        text-shadow: 0px 0px 20px black;
+        text-align: center;
+    }
+    .banner_subtitulo {
+        position: relative;
+        bottom: 35px;
+        color: white;
+        font-size: 10px;
+        text-align: center;
+        font-family: 'Alegreya Sans', sans-serif;
+    }
+    .banner {
+        max-height: 300px;
+    }
+    .carta h5 {
+        font-size: 20px;
+        padding-bottom: 5px;
+    }
+    .logo img {
+        min-width: 140px;
+        min-height: 150px;
+        max-height: 150px;
+    }
+    .conocenos {
+        margin-top: 15px;
+        display: grid;
+        grid-template-columns: repeat(1, fr);
+        grid-template-rows: 10% 90%;
+        width: 100%;
+        background-color: white;
+    }
+    .conocenos_titulo {
+        font-size: 25px;
+    }
+    footer p {
+        font-size: 12px;
+    }
 }
