@@ -363,48 +363,82 @@ footer {
     width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 65% 15% 20%;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-areas: "footer_1 footer_2 footer_3";
     margin: 0;
 }
 
-.footer_logo {
+.footer_1 {
+    color: white;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-area: footer_1;
+    margin: 20px;
+}
+
+.footer_1 p {
+    margin: 10px 0;
+}
+
+.footer_1 img {
+    width: 25px;
+    height: 25px;
+}
+
+.footer_2 {
+    grid-area: footer_2;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
 }
 
-.footer_logo img {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    min-height: 150px;
-    max-height: 150px;
-}
-
-.footer_social {
+.redes_sociales {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 80%;
+    height: auto;
 }
 
-.footer_social img {
+.redes_sociales img {
     width: 30px;
     height: 30px;
-    padding: 0 20px;
 }
 
-footer p {
+.redes_sociales img:first-child {
+    margin-right: 10px;
+}
+
+.redes_sociales img:last-child {
+    margin-left: 10px;
+}
+
+.footer_3 {
+    grid-area: footer_3;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    text-align: center;
-    color: white;
-    background-color: #18181A;
+    align-items: center;
     width: 100%;
     height: 100%;
+    color: white;
+    text-align: center;
+}
+
+.footer_3 p {
+    margin: 10px 0;
+}
+
+.telefono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -525,10 +559,22 @@ MediaQ
         height: 15vw;
         border-radius: 150px;
     }
-    footer p {
-        font-size: 12px;
-    }
     .visitanos {
         margin-top: 20px;
+    }
+    footer {
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: 100%;
+        grid-template-areas: "footer_1" "footer_3" "footer_2";
+    }
+    .imagen_footer_2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .imagen_footer_2 img {
+        width: 80vw;
+        height: 40vw;
     }
 }
