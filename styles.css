@@ -278,7 +278,75 @@ Carta
 }
 
 
+/*testimoniales*/
+
+.testimonios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: auto;
+    grid-template-areas: "carta_testimonios_1 carta_testimonios_2 carta_testimonios_3";
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+}
+
+.carta_testimonios {
+    display: grid;
+    height: auto;
+    width: 90%;
+    max-width: 400px;
+    height: 350px;
+    grid-template-columns: 100%;
+    grid-template-rows: 35% 10% 55%;
+    grid-template-areas: "imagen" "puntuacion" "texto";
+    justify-items: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px gray;
+}
+
+.carta_testimonio_img {
+    grid-area: imagen;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carta_testimonio_img img {
+    width: 75px;
+    height: 75px;
+    border-radius: 150px;
+}
+
+.carta_testimonio_puntuacion {
+    grid-area: puntuacion;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.checked {
+    color: orange;
+}
+
+.carta_testimonio_texto {
+    grid-area: texto;
+    width: 70%;
+    height: 100%;
+}
+
+
 /*Contacto*/
+
+.visitanos {
+    margin-top: 30px;
+}
 
 .contacto {
     margin: 0;
@@ -382,6 +450,12 @@ MediaQ
         width: 100%;
         background-color: white;
     }
+    .carta_testimonios {
+        height: 440px;
+    }
+    .carta_testimonio_texto {
+        font-size: 1.9vw;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -433,7 +507,28 @@ MediaQ
     .conocenos_titulo {
         font-size: 25px;
     }
+    .testimonios {
+        display: grid;
+        grid-row-gap: 10px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat (3, 1fr);
+        grid-template-areas: "carta_testimonios_1" "carta_testimonios_2" "carta_testimonios_3";
+    }
+    .carta_testimonio_texto {
+        font-size: 4vw;
+    }
+    .carta_testimonios {
+        height: 85vw;
+    }
+    .carta_testimonio_img img {
+        width: 15vw;
+        height: 15vw;
+        border-radius: 150px;
+    }
     footer p {
         font-size: 12px;
+    }
+    .visitanos {
+        margin-top: 20px;
     }
 }
